@@ -8,10 +8,12 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted   # 👈 tells GitHub to use your own runner
+    # optionally you can add custom labels if you gave your runner labels
+    # runs-on: [self-hosted, linux, my-server]
 
     steps:
-      - uses: actions/checkout@v4  
+      - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
         with:
@@ -20,6 +22,5 @@ jobs:
       - name: Install dependencies manually
         run: |
           python -m pip install --upgrade pip
-          pip install pytest flask boto3  # 👈 add all your needed libs here
-
+          pip install pytest flask boto3
 
