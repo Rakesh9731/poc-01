@@ -27,3 +27,21 @@ jobs:
       - name: Run tests
         run: pytest
 
+  build-and-publish-image:
+    needs: build-and-test
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build
+        uses: docker/build-push-action@v5
+        with:
+          context: poc-01
+          load: true
+          tags: gemini-poc-01:latest
+
