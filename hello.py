@@ -3,7 +3,7 @@ from flask import Flask
 app = Flask(__name__)
 
 def get_greeting():
-    return "hello there welcome"
+    return "hello rockie, welcome to ur application"
 
 @app.route("/")
 def home():
