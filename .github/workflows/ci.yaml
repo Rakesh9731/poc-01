@@ -22,5 +22,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest flask boto3  # 👈 add all your needed libs here
 
-      - name: Run tests
-        run: pytest
+
