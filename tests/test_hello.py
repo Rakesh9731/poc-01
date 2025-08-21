@@ -1,5 +1,3 @@
-import sys
-sys.path.append("/home/ubuntu/gemini/poc-01")
 from hello import get_greeting
 
 def test_get_greeting():
