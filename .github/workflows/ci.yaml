@@ -42,9 +42,8 @@ jobs:
         
         
         with:
-          context: ./gemini/poc-01
+          context: ./poc-01
           load: true
-          file: ./Dockerfile
+          file: ./poc-01/Dockerfile
           tags: gemini-poc-01:latest
         
-
