@@ -39,9 +39,9 @@ jobs:
 
       - name: Build
         uses: docker/build-push-action@v5
-        working-directory: poc-01
+        
         with:
-          context: .
+          context: ${{ github.workspace }}/poc-01
           load: true
           file: Dockerfile
           tags: gemini-poc-01:latest
