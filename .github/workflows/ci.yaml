@@ -42,6 +42,7 @@ jobs:
         with:
           context: .
           load: true
-          file: poc-01/Dockerfile
+          file: Dockerfile
           tags: gemini-poc-01:latest
+        working-directory: poc-01
 
