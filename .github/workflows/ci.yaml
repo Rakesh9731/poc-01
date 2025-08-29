@@ -44,4 +44,6 @@ jobs:
           load: true
           file: ./Dockerfile
           tags: gemini-poc-01:latest
+      - name: Run Docker container
+        run: docker run -d --rm -p 9000:9000 gemini-poc-01:latest
         
