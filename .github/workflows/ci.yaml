@@ -40,8 +40,8 @@ jobs:
       - name: Build
         uses: docker/build-push-action@v5
         with:
-          context: ./poc-01
+          context: .
           load: true
-          file: ./poc-01/Dockerfile
+          file: ./Dockerfile
           tags: gemini-poc-01:latest
         
