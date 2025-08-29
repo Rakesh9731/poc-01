@@ -39,8 +39,6 @@ jobs:
 
       - name: Build
         uses: docker/build-push-action@v5
-        
-        
         with:
           context: ./poc-01
           load: true
